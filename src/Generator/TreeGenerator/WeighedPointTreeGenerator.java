@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import SupportTools.Edge;
-public class WeighedTreeGenerator implements Generator<Edge>{
+public class WeighedPointTreeGenerator implements Generator<Edge>{
     private IntSequenceGenerator weighGenerator;
     private TreeGenerator edgeGenerator;
     ArrayList<Edge> edgeStore;
     Random random;
-    public WeighedTreeGenerator(int vertexNum,long edgeRangeL,long edgeRangeR){
+    public WeighedPointTreeGenerator(int vertexNum, long edgeRangeL, long edgeRangeR){
         edgeStore = new ArrayList<>();
         weighGenerator = new IntSequenceGenerator(vertexNum - 1,edgeRangeL,edgeRangeR);
         edgeGenerator = new TreeGenerator(vertexNum);

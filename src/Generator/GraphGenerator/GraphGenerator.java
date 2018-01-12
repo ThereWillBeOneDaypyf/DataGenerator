@@ -14,6 +14,12 @@ public class GraphGenerator implements Generator<Edge>{
         edge = new RandomEdge(vertexNum);
         cnt = 0;
     }
+    public GraphGenerator(int vertexNum,int edgeNum,boolean isDirected){
+        this.edgeNum = edgeNum;
+        this.vertexNum = vertexNum;
+        edge = new RandomEdge(vertexNum,isDirected);
+        cnt = 0;
+    }
     @Override
     public boolean hasNext(){
        return cnt < edgeNum;

@@ -24,6 +24,9 @@ public class Edge {
     public long getW(){
         return w;
     }
+    public boolean getHasW(){
+        return hasw;
+    }
     public Edge copy(){
        Edge another = new Edge(this.u,this.v,this.w);
        return another;
@@ -35,7 +38,7 @@ public class Edge {
         if(!(obj instanceof Edge))
             return false;
         Edge temp = (Edge) obj;
-        if(temp.getU() != this.u || temp.getV() != this.v || this.hasw != temp.hasw)
+        if(temp.getU() != this.u || temp.getV() != this.v || this.hasw != temp.getHasW())
             return false;
         if(this.hasw == true && this.w != temp.getW())
             return false;
